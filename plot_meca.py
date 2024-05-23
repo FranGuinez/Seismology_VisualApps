@@ -12,6 +12,7 @@ Desarrollado por Francisca Guiñez Rivas.
 2024
 '''
 
+
 class FocalMechanismApp:
     def __init__(self, root):
         self.root = root
