@@ -3,6 +3,13 @@ from tkinter import ttk
 from obspy.taup import TauPyModel
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
+'''
+Aplicación de visualización de rayos sísmicos.
+
+Desarrollado por Francisca Guiñez Rivas.
+
+2024
+'''
 
 class WavePathApp:
     def __init__(self, root):
