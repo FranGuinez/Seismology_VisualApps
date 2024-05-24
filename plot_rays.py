@@ -1,8 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from obspy.taup import TauPyModel
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-from matplotlib.figure import Figure
+
 '''
 Aplicación de visualización de rayos sísmicos.
 
@@ -63,17 +62,6 @@ class WavePathApp:
         distance = self.distance_deg.get()
         phase_list = self.phase_list.get().split(',')
         projection = self.projection_type.get()
-
-        # Crear una nueva ventana para la figura
-        # fig_window = tk.Toplevel(self.root)
-        # fig_window.title("P-Wave Path Plot")
-
-        # Crear lienzo para la nueva figura
-        # fig = Figure(figsize=(8, 6))
-        # ax = fig.add_subplot(111)
-        # canvas = FigureCanvasTkAgg(fig, master=fig_window)
-        # canvas.draw()
-        # canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
 
         # Graficar la trayectoria de ondas
         arrivals = self.model.get_ray_paths(source_depth_in_km=depth, distance_in_degree=distance, phase_list=phase_list)
